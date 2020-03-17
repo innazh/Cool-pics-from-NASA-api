@@ -1,0 +1,14 @@
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\bin\Debug\netstandard2.0\ProjectNASA.deps.json
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\bin\Debug\netstandard2.0\ProjectNASA.dll
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\bin\Debug\netstandard2.0\ref\ProjectNASA.dll
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\bin\Debug\netstandard2.0\ProjectNASA.pdb
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\APODetail.xaml.g.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\MarsRoversPhotosPage.xaml.g.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.AssemblyInfoInputs.cache
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.AssemblyInfo.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.dll
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ref\ProjectNASA.dll
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.pdb

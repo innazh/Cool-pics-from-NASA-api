@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProjectNASA.MainPage">
+
+    <StackLayout>
+        <Label Margin="20" x:Name="APODTitle" HorizontalOptions="Center" FontSize="Title" />
+        <Frame CornerRadius="20" HasShadow="True" IsClippedToBounds="True" Margin="10" Padding="0">
+            <ImageButton Clicked="goAPODetail"  Aspect="AspectFill" x:Name="ImageOfTheDayAPOD" HorizontalOptions="Fill" HeightRequest="300"/>
+        </Frame>
+        <DatePicker x:Name="datePicker" DateSelected="DateSelected" VerticalOptions="Center" HorizontalOptions="Center"></DatePicker>
+            
+        <!--READ THIS ABOUT LOADING SCREENS AND UI START THREAD DELAY-->
+        <!--
+        https://xamarinhelp.com/xamarin-forms-async-task-startup/
+        -->
+        <RelativeLayout>
+            
+            <Button Text="EFIC" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.1,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}"></Button>
+            
+            <Button Clicked="goMarsRoverPhotos" Text="Mars Rover" RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.5555,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}">
+            </Button>
+            
+        </RelativeLayout>
+    </StackLayout>
+
+</ContentPage>

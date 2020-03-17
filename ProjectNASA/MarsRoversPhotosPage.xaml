@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProjectNASA.MarsRoversPhotosPage"
+             Title="Find your favorite picture from Mars!">
+    <Grid
+          Opacity="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Picker Grid.Row="0" Grid.Column="0" Title="Pick a rover!" SelectedIndexChanged="onRoverPicked" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Curiosity</x:String>
+                    <x:String>Opportunity</x:String>
+                    <x:String>Spirit</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker Grid.Row="0" Grid.Column="1" x:Name="cameraPicker" Title="Select a camera" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
+        </Picker>
+        
+    </Grid>
+</ContentPage>
