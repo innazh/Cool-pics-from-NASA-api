@@ -8,7 +8,7 @@
 
     <StackLayout>
         <Label Margin="20" x:Name="APODTitle" HorizontalOptions="Center" FontSize="Title" />
-        <Frame CornerRadius="20" HasShadow="True" IsClippedToBounds="True" Margin="10" Padding="0">
+        <Frame BackgroundColor="Accent" CornerRadius="20" HasShadow="True" IsClippedToBounds="True" Margin="10" Padding="10">
             <ImageButton Clicked="goAPODetail"  Aspect="AspectFill" x:Name="ImageOfTheDayAPOD" HorizontalOptions="Fill" HeightRequest="300"/>
         </Frame>
         <DatePicker x:Name="datePicker" DateSelected="DateSelected" VerticalOptions="Center" HorizontalOptions="Center"></DatePicker>
@@ -19,7 +19,7 @@
         -->
         <RelativeLayout>
             
-            <Button Text="EFIC" RelativeLayout.XConstraint="{ConstraintExpression 
+            <Button Clicked="goSpaceList" Text="My space list" RelativeLayout.XConstraint="{ConstraintExpression 
             Type=RelativeToParent,Property=Width,Factor=.1,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3333,Constant=0}"></Button>

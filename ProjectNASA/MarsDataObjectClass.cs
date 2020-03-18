@@ -1,4 +1,6 @@
 //Camera spec query class is the same as class from only rover spec query
+using System.Collections.Generic;
+
 public class Camera
 {
     public int id { get; set; }
@@ -36,7 +38,7 @@ public class LatestPhoto
     public Rover rover { get; set; }
 }
 
-public class RootObject
+public class MarsPicsObject
 {
     public List<LatestPhoto> latest_photos { get; set; }
 }

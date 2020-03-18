@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              x:Class="ProjectNASA.APODetail"
              Title="Astronomy Picture of the Day">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarItem" Text="Save" Clicked="SaveAPODtoMyList"></ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         
         <StackLayout>

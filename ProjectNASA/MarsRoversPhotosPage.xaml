@@ -5,8 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ProjectNASA.MarsRoversPhotosPage"
-             Title="Find your favorite picture from Mars!">
-    <Grid
+             Title="Mars photos!">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save to my list" Clicked="toolBarItemInstructions"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="0,40,0,0"
           Opacity="10">
 
         <Grid.RowDefinitions>
@@ -21,8 +25,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <Image Grid.Row="0" Grid.Column="1" x:Name="roverImg" Source="curiosity.jpg" HorizontalOptions="Center"></Image>
 
-        <Picker Grid.Row="0" Grid.Column="0" Title="Pick a rover!" SelectedIndexChanged="onRoverPicked" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
+        <Picker Grid.Row="1" Grid.Column="0" x:Name="roverPicker" Title="Pick a rover!" SelectedIndexChanged="onRoverPicked" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Curiosity</x:String>
@@ -32,8 +37,33 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <Picker Grid.Row="0" Grid.Column="1" x:Name="cameraPicker" Title="Select a camera" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
+        <Picker Grid.Row="1" Grid.Column="1" x:Name="cameraPicker" Title="Select a camera" SelectedIndexChanged="onCameraPicked" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body">
         </Picker>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="submitBtn" Clicked="submitBtn_Clicked" Text="Submit" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Body"/>
+       
+        <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="marsPicsListView" RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Save" Clicked="saveToDB" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical" Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Image WidthRequest="100" HeightRequest="100" Source="{Binding img_src}" />
+                                <Label Text="{Binding rover.name}"></Label>
+                                <Label Text="{Binding earth_date}"
+                                TextColor="#503026" />
+                                <Label Text="{Binding camera.full_name}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" WidthRequest="70" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
     </Grid>
 </ContentPage>

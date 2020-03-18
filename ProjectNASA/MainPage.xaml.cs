@@ -55,6 +55,7 @@ namespace ProjectNASA
             else ImageOfTheDayAPOD.Source = "videoDummy.png";
         }
 
+        //Sends user to the page where they can search for pictures taken by the NASA's Mars Rovers.
         private async void goMarsRoverPhotos(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MarsRoversPhotosPage());
@@ -63,7 +64,12 @@ namespace ProjectNASA
         //Triggered when the image is clicked, redirects user to a more detailed APOD page.
         public async void goAPODetail(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new APODetail(d));
+            await Navigation.PushAsync(new APODetail(d, true));
+        }
+
+        private async void goSpaceList(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new mySpaceListPage());
         }
     }
 }

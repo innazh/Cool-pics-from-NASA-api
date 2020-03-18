@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="My favourite space things list"
+             x:Class="ProjectNASA.mySpaceListPage">
+    <StackLayout>
+        <ListView ItemTapped="mysavedspacelistview_ItemTapped" x:Name="mysavedspacelistview" RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical" Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Image WidthRequest="100" HeightRequest="100" Source="{Binding img_url}" />
+                                <Label Text="{Binding title}" VerticalOptions="Center"></Label>
+                                <Label Text="{Binding date}" HorizontalOptions="EndAndExpand" WidthRequest="80"
+                                TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label x:Name="nothingHereLabel" IsVisible="False" Text="You don't have any saved items" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+</ContentPage>

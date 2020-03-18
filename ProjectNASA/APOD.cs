@@ -13,6 +13,15 @@ namespace ProjectNASA
         public string title { get; set; }
         public string url { get; set; }
 
+        public APOD() { }
+        public APOD(string title, string date, string expl, string type, string url)
+        {
+            this.title = title;
+            this.explanation = expl;
+            this.date = date;
+            this.media_type = type;
+            this.url = url;
+        }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder("Title: ");

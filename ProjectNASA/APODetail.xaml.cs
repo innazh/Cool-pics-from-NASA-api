@@ -12,10 +12,20 @@ namespace ProjectNASA
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class APODetail : ContentPage
     {
-        public APODetail(APOD d)
+        APOD apod;
+        //Constructor also accepts a boolean flag that determines if the toolbaritem button is needed
+        //false - remove the button, true - continue as if nothing happened
+        public APODetail(APOD d, Boolean flag)
         {
             InitializeComponent();
+            
+            if (!flag)
+            {
+                ToolbarItems.Remove(toolbarItem);
+            }
 
+            apod = d;
+            
             if (d.media_type.Equals("image"))
             {
                 web.IsVisible = false;
@@ -47,6 +57,11 @@ namespace ProjectNASA
                 //browser.Source = personHtmlSource;
                 //Content = browser;
             }
+        }
+
+        private async void SaveAPODtoMyList(object sender, EventArgs e)
+        {
+            await App.Database.SaveObjectToList(new myListObject(apod.title, apod.url, apod.date, apod.media_type, apod.explanation));
         }
     }
 }

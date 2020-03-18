@@ -12,3 +12,6 @@ D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.dll
 D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ref\ProjectNASA.dll
 D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.pdb
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\ProjectNASA.csprojAssemblyReference.cache
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\mySpaceListPage.xaml.g.cs
+D:\Seneca\DPS926\ProjectNASA\ProjectNASA\obj\Debug\netstandard2.0\MarsPhotoDetailPage.xaml.g.cs
